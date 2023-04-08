@@ -1,1 +1,1 @@
-java -jar C:\Users\aga\Documents\ANTLR\antlr-4.9.2-complete.jar UnicornLang.g4
+java -jar C:\Users\aga\Documents\ANTLR\antlr-4.9.2-complete.jar -Dlanguage=Cpp UnicornLang.g4
