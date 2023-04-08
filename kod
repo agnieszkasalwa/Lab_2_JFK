@@ -1,0 +1,31 @@
+#include <iostream>
+#include "antlr4-runtime.h"
+#include "UnicornLangLexer.h"
+#include "UnicornLangParser.h"
+
+using namespace antlr4;
+
+int main(int argc, const char* argv[]) {
+    // Wczytanie wejścia od użytkownika
+    ANTLRInputStream input("jednorożec x <3 x = 5 <3 wypluj x + 3 <3");
+
+    // Utworzenie leksera
+    UnicornLangLexer lexer(&input);
+
+    // Utworzenie tokenów
+    CommonTokenStream tokens(&lexer);
+
+    // Utworzenie parsera
+    UnicornLangParser parser(&tokens);
+
+    // Wywołanie reguły program
+    auto program = parser.program();
+
+    // Przeparsowanie wejścia i wykonanie operacji
+    int result = program->execute();
+
+    // Wyświetlenie wyniku
+    std::cout << "Wynik: " << result << std::endl;
+
+    return 0;
+}
