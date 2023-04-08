@@ -1,0 +1,4 @@
+tęcza x = 3.14 <3
+jednorożec y = 42 <3
+wypluj x + y * 2.0 <3
+zabierz x <3
