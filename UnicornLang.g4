@@ -9,7 +9,7 @@ io : 'wypluj' expression '<3' | 'zabierz' ID '<3';
 type : 'jednorożec' | 'tęcza';
 expression : term ((ADD | SUB) term)*;
 term : factor ((MUL | DIV) factor)*;
-factor : JEDNOROZEC | TĘCZA | ID | '(' expression ')';
+factor : JEDNOROŻEC | TĘCZA | ID | '(' expression ')';
 
 ID : [a-zA-Z]+;
 JEDNOROŻEC : [0-9]+;
